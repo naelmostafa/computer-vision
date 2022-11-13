@@ -1,6 +1,6 @@
 import cv2 as cv
 
-def readVideo(video_path):
+def read_video(video_path):
     """ 
     Read a video from a given path and return a list of frames
     """
@@ -16,10 +16,12 @@ def readVideo(video_path):
     cap.release()
     return frames
 
-def playVideo(frames):
+def play_video(frames):
     """
     Play a video from a list of frames
     """
+    print("Playing video ....")
+    print("Press q to exit")
     for frame in frames:
         cv.imshow('frame', frame)
         if cv.waitKey(25) & 0xFF == ord('q'):
