@@ -10,7 +10,7 @@ def block_matching(img1, img2, window_size=3, max_disparity=16, metric=SSD):
     disparity_map = np.zeros((height, width), np.uint8)
     # Define the half window
     half_window = window_size // 2
-    # Loop through every pixel in the left image progress bar
+    # Loop through every pixel in the left image
     for y in range(half_window, height - half_window):
         for x in range(half_window, width - half_window):
             # Get the current window
