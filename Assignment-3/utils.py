@@ -1,5 +1,6 @@
 import numpy as np
 from tqdm import tqdm
+from random import randint
 
 SSD = lambda window1, window2: np.sum((window1.astype("float") - window2.astype("float")) ** 2)
 SAD = lambda window1, window2: np.sum(np.abs(window1.astype("float") - window2.astype("float")))
@@ -77,11 +78,18 @@ def dp_backpass(cost_matrix):
     disparity_mapL = np.zeros((height, widthL), dtype='float16')
     disparity_mapR = np.zeros((height, widthR), dtype='float16')
 
+    # Define matrix for plotting optimal path
+    optimalPath = np.zeros((widthL, widthR), dtype='uint8')
+    randScanline = randint(0, height) # Select random scanline to plot optimal path for
+
     # Computing Back Pass
     for scanline in range(height):
         
         i = widthL-1; j = widthR-1
+        
         while (i > 0 and j > 0):
+            if scanline == randScanline: optimalPath[i][j] = 255 # Plot optimal path if scanline = randomly selected
+
             _min = np.argmin([cost_matrix[scanline][i-1][j-1], cost_matrix[scanline][i-1][j], cost_matrix[scanline][i][j-1]])
             if _min == 0: # Pixels i and j match
                 disparity_mapL[scanline][i] = np.abs(j - i)
@@ -94,4 +102,4 @@ def dp_backpass(cost_matrix):
                 disparity_mapR[scanline][j] = 0
                 j-=1
 
-    return disparity_mapL, disparity_mapR
+    return disparity_mapL, disparity_mapR, optimalPath
