@@ -46,17 +46,14 @@ We were required to to run 3 different models on the COCO dataset and compare th
 
 | Model | mAP | FPS |
 | --- | --- | --- |
-| Faster R-CNN resnet50 | 0.371 | 7.5 |
-| FCOS | 0.385 | 12.5 |
-| SSD | 0.391 | 12.5 |
-
-- The results show that SSD is the best model, followed by FCOS and Faster R-CNN resnet50.
+| Faster R-CNN resnet50 | 0.xx | x.x |
+| FCOS | 0.xxx | x.x |
+| SSD | 0.xxx | x.x |
 
 ## Conclusion
 
 - In this assignment, we worked on COCO dataset, which is a large-scale object detection, segmentation, and captioning dataset.
 - We ran 3 different models on the COCO dataset and compared the results.
-- The results show that SSD is the best model, followed by FCOS and Faster R-CNN resnet50.
 
 ## References
 
