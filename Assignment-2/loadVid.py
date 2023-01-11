@@ -1,7 +1,7 @@
 import numpy as np
 import cv2 
 
-def loadVid(path):
+def load_vid(path):
 	# Create a VideoCapture object and read from input file
 	# If the input is the camera, pass 0 instead of the video file name
 	cap = cv2.VideoCapture(path)

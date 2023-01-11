@@ -9,7 +9,6 @@ def read_video(video_path):
     while cap.isOpened():
         ret, frame = cap.read()
         if ret:
-            # frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
             frames.append(frame)
         else:
             break
