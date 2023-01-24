@@ -45,8 +45,8 @@ Taught by [Prof. Dr. Marwan El-Torki](https://www.linkedin.com/in/marwan-torki-9
 - Bonus
   - Choose three diffrent layers and show their feature map
 
-[Assignment-1]: Assignment-1/README.md
-[Assignment-2]: Assignment-2/README.md
-[Assignment-3]: Assignment-3/README.md
-[Assignment-3-2]: Assignment-3/README.md
-[Assignment-4]: Assignment-4/README.md
+[Assignment-1]: Assignment-1/
+[Assignment-2]: Assignment-2/
+[Assignment-3]: Assignment-3/
+[Assignment-3-2]: Assignment-3-2/
+[Assignment-4]: Assignment-4/
