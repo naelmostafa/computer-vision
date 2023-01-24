@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import os
 
 
 def get_rectangle(frame):
@@ -133,3 +134,25 @@ def getJacobian(templatePts):
     jacob = np.stack((row1, row2), axis=1)
 
     return jacob
+
+def save_as_npy(frames, filename):
+    """
+    Saves a list of frames as a npy file
+    """
+    if os.path.exists(filename):
+        print("File already exists")
+        return
+    np.save(filename, frames)
+    print("Saved as", filename)
+
+def save_as_gif(frames, filename, fps=10, duration=0.02):
+    """
+    Saves a list of frames as a gif file
+    """
+    if os.path.exists(filename):
+        print("File already exists")
+        return
+    import imageio
+    imageio.mimsave(filename, frames, fps=fps, duration=duration, subrectangles=True)
+    print("Saved as", filename)
+
