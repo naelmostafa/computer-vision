@@ -1,7 +1,6 @@
 *.jpg
 *.png
 *.mov
-*.pdf
 *.zip
 *npy
 __pycache__/
