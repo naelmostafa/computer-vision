@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import os
+import imageio
 
 
 def get_rectangle(frame):
@@ -152,7 +153,8 @@ def save_as_gif(frames, filename, fps=10, duration=0.02):
     if os.path.exists(filename):
         print("File already exists")
         return
-    import imageio
+    frames = frames[::2]
+    # reduce the resolution of the frames
+    frames = [cv2.resize(frame, (0,0), fx=0.5, fy=0.5) for frame in frames]
     imageio.mimsave(filename, frames, fps=fps, duration=duration, subrectangles=True)
     print("Saved as", filename)
-
