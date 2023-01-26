@@ -14,7 +14,7 @@ This assignment is about tracking objects in video. We will implement Lucas-Kana
 ## results
 
 <div style="width: 200px; height: 200px; display: flex">
-    <img src="../Data/tracker_car1.gif">
-    <img src="../Data/tracker_car2.gif">
-    <img src="../Data/tracker_landing.gif">
+    <img src="./Data/tracker_car1.gif">
+    <img src="./Data/tracker_car2.gif">
+    <img src="./Data/tracker_landing.gif">
 </div>
